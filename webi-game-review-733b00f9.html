@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 发现精品手游平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: #f4f5f7;
+            color: #1e2a3a;
+            line-height: 1.6;
+        }
+
+        /* ── 深色头图 ── */
+        .hero {
+            background: linear-gradient(135deg, #0b1a2e 0%, #1c2f46 70%, #263b54 100%);
+            color: #eef3f9;
+            padding: 4rem 1.5rem 3.2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -20%;
+            top: -30%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(66, 133, 244, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero .tagline {
+            margin-top: 1rem;
+            font-size: 1.15rem;
+            color: #b0c7dd;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero .underline-accent {
+            display: inline-block;
+            width: 80px;
+            height: 3px;
+            background: #4f8cf7;
+            margin-top: 1.6rem;
+            border-radius: 4px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ── 浅色正文区 ── */
+        .content-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.8rem 1.5rem 3.5rem;
+            background: #ffffff;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            border-radius: 0 0 16px 16px;
+        }
+
+        .section {
+            margin-bottom: 2.8rem;
+        }
+
+        .section:last-child {
+            margin-bottom: 0.4rem;
+        }
+
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0b1a2e;
+            letter-spacing: 0.5px;
+            border-left: 5px solid #4f8cf7;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 0.9rem;
+            font-size: 1rem;
+        }
+
+        .strong-link {
+            color: #2563eb;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .strong-link:hover {
+            color: #1d4ed8;
+            border-bottom-color: #1d4ed8;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.2rem 1rem 1rem 1rem;
+            border-left: 4px solid #4f8cf7;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-card p {
+            margin-bottom: 0.3rem;
+            font-size: 0.95rem;
+        }
+
+        .feature-card .label {
+            font-weight: 600;
+            color: #0b1a2e;
+            display: block;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+
+        .faq-summary {
+            background: #f2f5fa;
+            padding: 1.3rem 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.2rem;
+        }
+
+        .faq-summary p {
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-summary p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-summary strong {
+            color: #0b1a2e;
+        }
+
+        .cta-hint {
+            margin-top: 2.5rem;
+            padding: 1.2rem 1.5rem;
+            background: #eef3fa;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.02rem;
+            border: 1px solid #dbe2ed;
+        }
+
+        .cta-hint a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #2563eb;
+        }
+
+        .cta-hint a:hover {
+            color: #1d4ed8;
+            border-bottom-color: #1d4ed8;
+        }
+
+        /* ── 页脚 ── */
+        .footer-note {
+            text-align: center;
+            padding: 1.8rem 1.5rem 2rem;
+            color: #5a6c80;
+            font-size: 0.9rem;
+            background: #ffffff;
+            max-width: 1100px;
+            margin: 0 auto 1.8rem;
+            border-radius: 0 0 16px 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .footer-note a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── 响应式 ── */
+        @media (max-width: 760px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-wrapper {
+                padding: 1.8rem 1rem 2rem;
+            }
+
+            .hero {
+                padding: 2.8rem 1rem 2.2rem;
+            }
+
+            .cta-hint {
+                font-size: 0.96rem;
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 -->
+    <section class="hero">
+        <h1>爱游戏</h1>
+        <p class="tagline">聚焦精品手游 · 快速识别平台定位与内容价值</p>
+        <span class="underline-accent"></span>
+    </section>
+
+    <!-- 正文区 -->
+    <div class="content-wrapper">
+
+        <!-- 背景说明 -->
+        <div class="section">
+            <h2>平台背景与定位</h2>
+            <p><a href="https://webi-game.com.cn" class="strong-link">爱游戏</a> 是一个面向移动端游戏爱好者的信息聚合与发现平台。网站聚焦于提供高品质手游的推荐、评测、玩法思路以及版本动态，帮助用户在大量新作中快速筛选出符合自己偏好的作品。平台内容以原创编辑与玩家社区贡献相结合，着重展现游戏的玩法特色而非单纯商业推广，从而让浏览者能够更有效率地判断一款游戏是否值得投入时间。</p>
+            <p>与流量导向的渠道不同，<a href="https://webi-game.com.cn" class="strong-link">爱游戏</a> 更愿意围绕“游戏性”与“长期可玩性”来组织专题，不论是独立佳作还是中型团队作品，只要具备扎实的玩法设计，均有机会被收录和讨论。站内设有游戏速览、开发者访谈、版本对比等栏目，方便不同需求的用户按图索骥。</p>
+        </div>
+
+        <!-- 三段自然介绍：特点 + 场景 + 价值 -->
+        <div class="section">
+            <h2>内容特点与使用场景</h2>
+            <p>平台内容结构兼顾深度与效率。每款收录游戏均附有简明的“一句话定性”与“适合人群”标签，同时提供千字左右的详细体验报告，避免信息过载或过度简略。对于新上线的热门作品，编辑团队通常在两周内完成初步评测，并持续跟踪后续版本更新。</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="label">🎮 游戏速览卡片</span>
+                    <p>核心玩法、美术风格、付费模式、推荐评级一目了然。适合碎片时间快速浏览。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="label">📖 专题与系列</span>
+                    <p>如“像素风推荐”“低氪策略游戏”“独立游戏新作”等主题合集，便于横向对比。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="label">💬 玩家点评区</span>
+                    <p>围绕耐玩度、操作手感、平衡性等维度展开讨论，评论质量经过基础审核。</p>
+                </div>
+                <div class="feature-card">
+                    <span class="label">📅 版本动态</span>
+                    <p>重要版本更新、活动预告、平衡调整汇总，减少逐个游戏查找的麻烦。</p>
+                </div>
+            </div>
+
+            <p style="margin-top: 1.2rem;">无论是寻找下个周末的沉浸体验，还是希望了解某款游戏的长线表现，<a href="https://webi-game.com.cn" class="strong-link">爱游戏</a> 都提供了结构化的信息路径。平台不追求覆盖所有手游，而是筛选出玩法有辨识度、运营相对稳定的作品进行长期跟踪。</p>
+        </div>
+
+        <div class="section">
+            <h2>对用户的实际价值</h2>
+            <p>多数手游平台的信息流充斥着广告位与榜单刷量，而<a href="https://webi-game.com.cn" class="strong-link">爱游戏</a> 尝试把选择权交还给玩家。通过编辑测评、社区反馈与客观数据（如活跃用户趋势、版本更新频率）来综合呈现一款游戏的真实面貌。用户不必在十几篇软文中辨别真伪，而是直接获得有参考意义的分析与概括。</p>
+            <p>此外，站内设有“游戏档案”页面，长期维护并更新每款收录游戏的基础信息、评分变化以及大事件时间轴。对于核心玩家与游戏行业观察者而言，这些积累的数据也可以作为轻度研究素材。整体而言，<a href="https://webi-game.com.cn" class="strong-link">爱游戏</a> 力求成为一个可靠的手游信息参考站，而非单纯的下载跳转页。</p>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-summary">
+            <p><strong>常见问题摘录</strong></p>
+            <p>▪ 网站收录游戏的标准？—— 以玩法创新、完成度、长期运营潜力为主要考量，不限制题材与厂商规模。</p>
+            <p>▪ 评测是否包含主观偏好？—— 编辑会标明个人倾向，同时提供客观优缺点列表，辅助读者自行判断。</p>
+            <p>▪ 能否提交自己发现的冷门佳作？—— 社区板块开放推荐通道，经审核后有机会进入正式收录名单。</p>
+            <p>▪ 更新频率如何？—— 每周至少更新 3~5 篇评测或专题，版本动态随官方公告同步。</p>
+        </div>
+
+        <!-- 页尾访问提示 -->
+        <div class="cta-hint">
+            <p>如果你想快速定位值得体验的手游，不妨浏览 <a href="https://webi-game.com.cn">爱游戏</a> 的游戏库与近期专题。信息密度高，无冗余广告，适合理性玩家。</p>
+        </div>
+
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer-note">
+        <p><a href="https://webi-game.com.cn">爱游戏</a> —— 发现值得玩的手游 · 阅读有依据的评测</p>
+    </div>
+
+</body>
+</html>
