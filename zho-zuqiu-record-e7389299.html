@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>足球竞猜 · 赛事对照与延伸阅读</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f4f7fa;
+            color: #1f2a3a;
+            line-height: 1.7;
+        }
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(135deg, #0b172c 0%, #1a2f46 60%, #2a4a6a 100%);
+            padding: 4rem 1.5rem 3.5rem;
+            text-align: center;
+            color: #eef3f9;
+            position: relative;
+            border-bottom: 4px solid #ffb347;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 720px;
+            margin: 0 auto;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        .hero .badge {
+            display: inline-block;
+            margin-top: 1.6rem;
+            background: #ffb347;
+            color: #0b172c;
+            padding: 0.35rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        /* 浅色正文区 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+            margin: 2.5rem 0;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            border-left: 6px solid #ffb347;
+            padding-left: 1rem;
+            margin-bottom: 1.8rem;
+            color: #13243a;
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #1f3a57;
+            margin: 1.6rem 0 0.6rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin-top: 1.2rem;
+        }
+        .card {
+            background: #f8fafd;
+            border-radius: 14px;
+            padding: 1.5rem 1.4rem;
+            border-left: 4px solid #ffb347;
+            transition: all 0.2s;
+        }
+        .card:hover {
+            background: #f0f5fb;
+        }
+        .card strong {
+            color: #0b2b4a;
+            font-weight: 600;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e4e9ef;
+            padding: 1.2rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: #1f3a57;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+        .faq-q::before {
+            content: "▹";
+            color: #ffb347;
+            font-size: 1.2rem;
+        }
+        .faq-a {
+            margin-top: 0.6rem;
+            padding-left: 1.6rem;
+            color: #384c62;
+        }
+        .link-em {
+            color: #1b6b9e;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #9bc3e0;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .link-em:hover {
+            color: #0a4570;
+            border-bottom-color: #0a4570;
+        }
+        .footer-links {
+            text-align: center;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 1.8rem 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            font-size: 0.95rem;
+            border-top: 1px solid #e8edf3;
+        }
+        .footer-links p {
+            margin-bottom: 0.4rem;
+        }
+        .footer-note {
+            color: #6a7b8a;
+            font-size: 0.85rem;
+            margin-top: 1.2rem;
+        }
+        @media (max-width: 680px) {
+            .hero h1 { font-size: 1.9rem; }
+            .hero p { font-size: 1rem; }
+            .grid-2 { grid-template-columns: 1fr; }
+            section { padding: 1.8rem 1.2rem; }
+            .container { padding: 0 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>赛前·赛后·延伸</h1>
+        <p>从日常查询到深度对照，围绕足球竞猜构建清晰的阅读框架。<br>不盲从数据，先理解赛程与逻辑。</p>
+        <span class="badge">⚽ 资料侧重 · 知识向</span>
+    </div>
+
+    <div class="container">
+        <!-- 优势区 / 特点卡片 -->
+        <section>
+            <h2>为什么需要独立的对照视角</h2>
+            <p>每轮联赛、杯赛都会产生大量信息，而 <a href="https://zho-zuqiu.com" class="link-em">足球竞猜</a> 在基础赛果之外，更关注赛程背景、对阵走势与延伸信息。下面几个场景可以说明这种日常对照的价值。</p>
+            <div class="grid-2">
+                <div class="card">
+                    <strong>📋 赛前快速筛查</strong>
+                    <p style="margin-top:0.6rem;">同一轮次十场比赛，先看近期交锋记录与伤停周期，再结合积分形势做初步筛选。不必依赖预测，只做事实整理。</p>
+                </div>
+                <div class="card">
+                    <strong>📊 赛后数据对照</strong>
+                    <p style="margin-top:0.6rem;">比分之外还包含射门、控球、关键传球等基础统计，适合自己对比两队实际表现与预期差异，形成个人笔记。</p>
+                </div>
+                <div class="card">
+                    <strong>🧩 联赛脉络梳理</strong>
+                    <p style="margin-top:0.6rem;">跨轮次看同一支球队的节奏变化——客场连平、主场连胜、核心球员轮换规律，这些连续性信息比单场结论更有参考意义。</p>
+                </div>
+                <div class="card">
+                    <strong>📖 延伸阅读支持</strong>
+                    <p style="margin-top:0.6rem;">每场比赛附带简短背景或战术摘要，可以快速了解双方近期风格，避免只看数字而忽略场景。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 说明区 / 怎么用 -->
+        <section>
+            <h2>如何利用这些信息</h2>
+            <p>我们建议把信息分为三个层次：<strong>① 基础赛果与赛程</strong> → <strong>② 对阵双方近期走势</strong> → <strong>③ 额外背景（裁判、天气、场地、轮换习惯）</strong>。日常使用时，先通过 <a href="https://zho-zuqiu.com" class="link-em">足球竞猜</a> 获取第一层与第二层，再根据自己的关注点决定是否深入第三层。</p>
+            <p>举例来说：某队周中踢了杯赛、周末联赛又是客场，那么体能和轮换就成为不可忽略的变量。此时单纯看联赛排名可能失真，而将杯赛出场信息纳入对照，判断就会更立体。这正是独立查阅与延伸阅读的意义。</p>
+            <p style="margin-top:1.4rem; background: #f1f6fd; padding: 0.8rem 1.2rem; border-radius: 12px; border-left: 4px solid #1b6b9e;"><strong>📌 提示：</strong> 所有数据均来自公开赛事统计，不包含任何预测或投注建议。请保持理性，将足球竞猜视为一种赛事文化查阅方式。</p>
+        </section>
+
+        <!-- FAQ 摘要 -->
+        <section>
+            <h2>常见疑问摘要</h2>
+            <div class="faq-item">
+                <div class="faq-q">这里的信息更新频率如何？</div>
+                <div class="faq-a">主要联赛和杯赛的赛果、赛程、基础统计通常在比赛结束后数小时内更新。杯赛分组、淘汰赛对阵则随官方公布同步调整。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">为什么看不到“推荐”或“分析”？</div>
+                <div class="faq-a">本页面定位为信息查询与延伸阅读，所有内容仅陈列事实与背景，不包含主观倾向。你可以根据自己的理解做进一步判断。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">能否查到历史赛季的对照数据？</div>
+                <div class="faq-a">目前覆盖最近两个完整赛季及当前赛季数据，早期赛季仅保留积分与关键射手等摘要。如需深度历史对照，建议结合其他公开数据库使用。</div>
+            </div>
+        </section>
+
+        <!-- 底部链接区 -->
+        <div class="footer-links">
+            <p>日常查询与延伸阅读，可参考 <a href="https://zho-zuqiu.com" class="link-em">足球竞猜</a> 的赛程与统计模块。</p>
+            <p>所有内容仅供个人学习与信息对照，不构成任何形式的引导。</p>
+            <div class="footer-note">
+                ⚡ 保持独立思考 · 数据只是起点
+            </div>
+        </div>
+    </div>
+</body>
+</html>
